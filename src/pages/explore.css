@@ -1,0 +1,81 @@
+.explorePage {
+  padding: 20px;
+  background: #0f0f1a;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.exploreTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.exploreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.exploreCard {
+  background: #1c1c2b;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.exploreCard:hover {
+  transform: scale(1.05);
+}
+
+.exploreImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.exploreCardFooter {
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(to right, #66ccff, #cc66ff);
+  color: black;
+  font-weight: bold;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: #1c1c2b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  color: #fff;
+  position: relative;
+}
+
+.modalImage {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
