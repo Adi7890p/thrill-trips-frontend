@@ -86,8 +86,8 @@ const Login = () => {
       if (data.success) {
         setAdminError("");
 
-        sessionStorage.setItem("username", adminUsername);
-        console.log(sessionStorage.getItem("username"));
+        // sessionStorage.setItem("username", adminUsername);
+        // console.log(sessionStorage.getItem("username"));
 
         alert("Admin logged in successfully!");
         navigate('/admin');
