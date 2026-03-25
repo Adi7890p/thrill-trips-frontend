@@ -35,7 +35,7 @@ const Login = () => {
     }
 
     try {
-      const res = await fetch("https://thrill-trips-backend-production.up.railway.app/loginUser", {
+      const res = await fetch("https://nodejs-production-ccb0.up.railway.app/loginUser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: userUsername, password: userPassword }),
@@ -75,7 +75,7 @@ const Login = () => {
     }
 
     try {
-      const res = await fetch("https://thrill-trips-backend-production.up.railway.app/loginAdmin", {
+      const res = await fetch("https://nodejs-production-ccb0.up.railway.app/loginAdmin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: adminUsername, password: adminPassword }),
