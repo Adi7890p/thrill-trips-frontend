@@ -10,7 +10,7 @@ const Trips = () => {
     useEffect(
         () => {
             const helo = async () => {
-                await axios.get('https://thrill-trips-backend-production.up.railway.app/bookings/' + sessionStorage.getItem("username")).then((res) => {
+                await axios.get('https://nodejs-production-ccb0.up.railway.app/bookings/' + sessionStorage.getItem("username")).then((res) => {
                     setBookings(res.data);
                     console.log(res.data);
 
@@ -23,7 +23,7 @@ const Trips = () => {
     useEffect(
         () => {
             bookings.map((elem) => {
-                axios.get('https://thrill-trips-backend-production.up.railway.app/bookpark/' + elem.pid).then((res) => {
+                axios.get('https://nodejs-production-ccb0.up.railway.app/bookpark/' + elem.pid).then((res) => {
                     setpnm((prev) => [...prev, res.data]);
                     console.log(res.data);
                 })
@@ -48,7 +48,7 @@ const Trips = () => {
                             <tr className='flex border-b border-dashed hover:bg-yellow-200 transition-all duration-300 justify-between w-full p-3 items-center  text-orange-600 flex-wrap '>
 
                                 <td className='w-1/4 text-center' >{pnm[idx] && pnm[idx].pname}</td>
-                                <td className='w-1/4 text-center' ><img src={"https://thrill-trips-backend-production.up.railway.app/uploads/"+(pnm[idx] && pnm[idx].pimage)} className='rounded-xl border-2 border-amber-700 border-dashed p-1' alt="" /></td>
+                                <td className='w-1/4 text-center' ><img src={"https://nodejs-production-ccb0.up.railway.app/uploads/"+(pnm[idx] && pnm[idx].pimage)} className='rounded-xl border-2 border-amber-700 border-dashed p-1' alt="" /></td>
                                 <td className='w-1/4 text-center' >{pnm[idx] && pnm[idx].pcity}</td>
                                 <td className='w-1/4 text-center' >{pnm[idx] && pnm[idx].category}</td>
 
