@@ -6,7 +6,7 @@ const Changepwd = () => {
     const [neww ,setneww]=useState('');
 
     const cng = async () =>{
-        await axios.post('https://thrill-trips-backend-production.up.railway.app/cng',
+        await axios.post('https://nodejs-production-ccb0.up.railway.app/cng',
             {old : old,neww : neww,username : sessionStorage.getItem("username")}
         ).then((res)=>{
             alert(res.data.message);
