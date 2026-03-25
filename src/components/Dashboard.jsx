@@ -6,7 +6,7 @@ const Dashboard = () => {
   useEffect(
     ()=>{
       if(sessionStorage.getItem("username")){
-        axios.get('https://thrill-trips-backend-production.up.railway.app/user/'+sessionStorage.getItem("username")).then((res)=>{
+        axios.get('https://nodejs-production-ccb0.up.railway.app/user/'+sessionStorage.getItem("username")).then((res)=>{
           setUser(res.data[0]);
           console.log(res.data);
         })
