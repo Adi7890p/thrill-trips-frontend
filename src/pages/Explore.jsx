@@ -46,7 +46,7 @@ const Explore = () => {
   useEffect(
     () => {
       console.log(sortval);
-      axios.get('https://thrill-trips-backend-production.up.railway.app/sort/' + sortval).then((res) => {
+      axios.get('https://nodejs-production-ccb0.up.railway.app/sort/' + sortval).then((res) => {
         setPark(res.data);
         console.log(res.data);
       })
@@ -65,7 +65,7 @@ const Explore = () => {
 
   const [park, setPark] = useState();
   useEffect(() => {
-    axios.get('https://thrill-trips-backend-production.up.railway.app/parks').then((res) => {
+    axios.get('https://nodejs-production-ccb0.up.railway.app/parks').then((res) => {
       setPark(res.data);
       console.log(res.data);
     })
@@ -73,7 +73,7 @@ const Explore = () => {
 
   useEffect(() => {
     if (search.length > 0) {
-      axios.get('https://thrill-trips-backend-production.up.railway.app/search/' + search).then((res) => {
+      axios.get('https://nodejs-production-ccb0.up.railway.app/search/' + search).then((res) => {
         if (res.data.length > 0) {
           setPark(res.data);
           console.log(res.data);
@@ -82,7 +82,7 @@ const Explore = () => {
       })
     }
     else {
-      axios.get('https://thrill-trips-backend-production.up.railway.app/parks').then((res) => {
+      axios.get('https://nodejs-production-ccb0.up.railway.app/parks').then((res) => {
         setPark(res.data);
         console.log(res.data);
       })
@@ -166,7 +166,7 @@ const Explore = () => {
           return (
             <div key={idx} className=' bg-[#77B7FA] rounded-2xl hover:shadow-amber-500 hover:shadow-2xl h-[60vh] w-[30%] mb-5 border-2 overflow-hidden hover:bg-yellow-400 hover:border-yellow-400 transition-all duration-300 '
               ref={(e) => { cardref.current[idx] = e; }} onClick={() => { effects(idx); cardClicked(); }} >
-              <img src={"https://thrill-trips-backend-production.up.railway.app/uploads/" + elem.pimage} className='h-[75%] w-full object-cover' alt="" />
+              <img src={"https://nodejs-production-ccb0.up.railway.app/uploads/" + elem.pimage} className='h-[75%] w-full object-cover' alt="" />
               <p className='text-2xl bg-[linear-gradient(135deg,#0d6efd,#6610f2,#d63384)] bg-clip-text text-transparent font-serif text-center mt-4' style={{ fontFamily: 'titlef', letterSpacing: 1.5 }} >{elem.pname}</p>
             </div>
           )
@@ -232,7 +232,7 @@ const Explore = () => {
               {cardidx != undefined && park[cardidx] && park[cardidx].description}
             </div>
 
-            <img src={"https://thrill-trips-backend-production.up.railway.app/uploads/" + (cardidx != undefined && park[cardidx] && park[cardidx].pimage)} className=' rounded-2xl h-[350px] w-[85%] border-2' alt="" />
+            <img src={"https://nodejs-production-ccb0.up.railway.app/uploads/" + (cardidx != undefined && park[cardidx] && park[cardidx].pimage)} className=' rounded-2xl h-[350px] w-[85%] border-2' alt="" />
 
             <h1 style={{ fontFamily: 'mouldy', fontSize: 90, margin: 15, fontWeight: 100, letterSpacing: 1.5 }}>Our Rides!!!</h1>
 
