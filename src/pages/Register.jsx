@@ -26,7 +26,7 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await axios.post('https://thrill-trips-backend-production.up.railway.app/register', {
+    await axios.post('https://nodejs-production-ccb0.up.railway.app/register', {
       username: username,
       password: password,
       fullname: fullname,
